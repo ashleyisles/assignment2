@@ -86,8 +86,8 @@ defmodule Ex04 do
   return value will be the thing you have to manipulate.
   """
 
-#  def even_odd(list) do
-#  end
+  def even_odd(list) do
+  end
 
   def make_lists(a, list, list2) do
       cond do
