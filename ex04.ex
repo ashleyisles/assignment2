@@ -39,7 +39,9 @@ defmodule Ex04 do
       [ 1, 2, 3, 4, 5 ]
 
   """
-  def reverse . . . "your code"
+  def reverse([head|tail]) do
+     reduce([head|tail], [], &[ &1 | &2 ])
+  end
 
   ##############################################################################
   # 4.2:  5 points #
@@ -55,7 +57,16 @@ defmodule Ex04 do
 
   """
 
-  def min . . . "your code"
+  def minimum(a, b) do
+      cond do
+          a <= b ->
+              a
+          a > b ->
+              b
+      end
+  end
+
+  def min(list), do: reduce(list, &minimum(&1, &2))
 
   ##############################################################################
   # 4.3: 10 points #
@@ -98,4 +109,3 @@ defmodule TestEx04 do
   use ExUnit.Case
   doctest Ex04
 end
-
